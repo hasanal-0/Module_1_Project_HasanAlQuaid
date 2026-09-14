@@ -7,7 +7,7 @@ Filters the loaded FARS data to include only motorcycle-related records.
 
 from load_data import load_data
 
-def filter_motorcycle_data():
+def filter_motorcycle_data(vehicle):
     """
     Load all raw FARS data and filter the vehicle data down to
     motorcycle-type vehicles only.
@@ -16,11 +16,13 @@ def filter_motorcycle_data():
     scooters, off-road motorcycles, three-wheel motorcycles, etc.
     per the FARS data dictionary.
 
+    Parameter:
+        vehicle (pd.DataFrame): the full vehicle DataFrame from load_data()
+
     Returns:
         pd.DataFrame: only the vehicle rows where BODY_TYP is a
-        motorcycle code.
+        motorcycle code
     """
-    accident, drugs, factor, person, safetyeq, vehicle, vision, weather = load_data()
     
     motorcycle_codes = list(range(80, 90))
     motorcycles_accidents = vehicle[vehicle["BODY_TYP"].isin(motorcycle_codes)]
@@ -28,7 +30,8 @@ def filter_motorcycle_data():
     return motorcycles_accidents
 
 if __name__ == "__main__":
-    motorcycles_accidents = filter_motorcycle_data()
+    accident, person, vehicle, = load_data()
+    motorcycles_accidents = filter_motorcycle_data(vehicle)
     
     # Save the filtered motorcycle accidents to a csv
     #motorcycles_accidents.to_csv("data/cleaned/motorcycles_accidents.csv", index=False)
