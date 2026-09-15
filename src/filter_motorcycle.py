@@ -34,4 +34,4 @@ if __name__ == "__main__":
     motorcycles_accidents = filter_motorcycle_data(vehicle)
     
     # Save the filtered motorcycle accidents to a csv
-    #motorcycles_accidents.to_csv("data/cleaned/motorcycles_accidents.csv", index=False)
+    #motorcycles_accidents.to_csv("data/interim/motorcycles_accidents.csv", index=False)
