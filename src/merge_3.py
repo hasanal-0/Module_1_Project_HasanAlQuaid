@@ -28,4 +28,4 @@ def merge_pipeline():
 
 if __name__ == "__main__":
     merged = merge_pipeline()
-    merged.to_csv("data/cleaned/merged_3_accident_person_vehicle.csv", index=False)
+    merged.to_csv("data/interim/merged_3_accident_person_vehicle.csv", index=False)
