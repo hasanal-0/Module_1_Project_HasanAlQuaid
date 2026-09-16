@@ -7,6 +7,7 @@ Engineer featrues that would me people better insight into the data.
     -
 """
 ## Note to future self: Columns that looked useful from the csv - these were found prior to removing duplicate columns, names might have changed
+# Testing the upsteam that i ruined somehow
 # STATENAME_x
 # MONTHNAME_x
 # DAY_WEEKNAME
