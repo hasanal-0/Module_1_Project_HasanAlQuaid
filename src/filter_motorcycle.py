@@ -10,11 +10,11 @@ from load_data import load_data
 def filter_motorcycle_data(vehicle):
     """
     Load all raw FARS data and filter the vehicle data down to
-    motorcycle-type vehicles only.
+    motorcycle-type vehicles only
 
     Uses BODY_TYP codes 80-89, which cover motorcycles, mopeds,
     scooters, off-road motorcycles, three-wheel motorcycles, etc.
-    per the FARS data dictionary.
+    per the FARS data dictionary
 
     Parameter:
         vehicle (pd.DataFrame): the full vehicle DataFrame from load_data()
@@ -34,4 +34,4 @@ if __name__ == "__main__":
     motorcycles_accidents = filter_motorcycle_data(vehicle)
     
     # Save the filtered motorcycle accidents to a csv
-    #motorcycles_accidents.to_csv("data/interim/motorcycles_accidents.csv", index=False)
+    motorcycles_accidents.to_csv("data/interim/motorcycles_accidents.csv", index=False)

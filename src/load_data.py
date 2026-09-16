@@ -16,13 +16,13 @@ files = ["accident.csv","person.csv", "vehicle.csv"]
 
 def load_data():
     """
-    Load all 3 raw FARS CSV files from data/raw/ into pandas DataFrames.
+    Load all 3 raw FARS CSV files from data/raw/ into pandas DataFrames
 
     Checks that each file exists before loading, and raises an error
-    if any are missing. Prints the shape of each DataFrame once loaded.
+    if any are missing. Prints the shape of each DataFrame once loaded
 
     Returns:
-        tuple of pd.DataFrame: (accident, person, vehicle), in that order.
+        tuple of pd.DataFrame: (accident, person, vehicle), in that order
     """
     for f in files:
         path = folder + f
@@ -33,9 +33,9 @@ def load_data():
     person = pd.read_csv(folder   + files[1], low_memory=False)
     vehicle = pd.read_csv(folder  + files[2], low_memory=False)
 
-    # print("accident:", accident.shape)
-    # print("person:", person.shape)
-    # print("vehicle:", vehicle.shape)
+    print("accident:", accident.shape)
+    print("person:", person.shape)
+    print("vehicle:", vehicle.shape)
 
     return accident, person, vehicle
 
