@@ -9,3 +9,6 @@
 
 # pycache
 __pycache__/
+
+# raw data files (large, available for download - see README)
+data/raw/person.csv
