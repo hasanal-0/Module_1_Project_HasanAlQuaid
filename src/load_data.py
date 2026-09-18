@@ -34,8 +34,24 @@ def load_data():
     vehicle = pd.read_csv(folder  + files[2], low_memory=False)
 
     print("accident:", accident.shape)
+    # missing_counts = accident.isnull().sum()
+    # columns_with_missing = missing_counts[missing_counts > 0].sort_values(ascending=False)
+    # print("Number of columns with missing values accident:", len(columns_with_missing))
+    # print(columns_with_missing)
+
     print("person:", person.shape)
+    # missing_counts_person = person.isnull().sum()
+    # columns_with_missing_person = missing_counts_person[missing_counts_person > 0].sort_values(ascending=False)
+    # print("Number of columns with missing values Person:", len(columns_with_missing_person))
+    # print(columns_with_missing_person)
+
+
+
     print("vehicle:", vehicle.shape)
+    # missing_counts_vehicle = vehicle.isnull().sum()
+    # columns_with_missing_vehicle = missing_counts_vehicle[missing_counts_vehicle > 0].sort_values(ascending=False)
+    # print("Number of columns with missing values vehicle:", len(columns_with_missing_vehicle))
+    # print(columns_with_missing_vehicle)
 
     return accident, person, vehicle
 
