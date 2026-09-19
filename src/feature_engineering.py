@@ -281,23 +281,23 @@ def age_ranges(df):
         if age in [998, 999]:
             age_ranges.append("Unknown")
         elif age <= 10:
-            age_ranges.append("0-10")
+            age_ranges.append("0 to 10")
         elif age <= 20:
-            age_ranges.append("11-20")
+            age_ranges.append("11 to 20")
         elif age <= 30:
-            age_ranges.append("21-30")
+            age_ranges.append("21 to 30")
         elif age <= 40:
-            age_ranges.append("31-40")
+            age_ranges.append("31 to 40")
         elif age <= 50:
-            age_ranges.append("41-50")
+            age_ranges.append("41 to 50")
         elif age <= 60:
-            age_ranges.append("51-60")
+            age_ranges.append("51 to 60")
         elif age <= 70:
-            age_ranges.append("61-70")
+            age_ranges.append("61 to 70")
         elif age <= 80:
-            age_ranges.append("71-80")
+            age_ranges.append("71 to 80")
         elif age <= 90:
-            age_ranges.append("81-90")
+            age_ranges.append("81 to 90")
         elif age == 0:
             age_ranges.append("0")
         else:
@@ -413,4 +413,4 @@ if __name__ == "__main__":
 
     print("\nShape after feature engineering: ", merge_3_df.shape)  
     print("\nNew columns added:", new_columns)
-    merge_3_df.to_csv("data/processed/final_motorcycles.csv", index=False)
+    #merge_3_df.to_csv("data/processed/final_motorcycles.csv", index=False)
