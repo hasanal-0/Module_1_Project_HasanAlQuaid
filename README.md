@@ -32,10 +32,3 @@ load_data.py -> filter_motorcycle.py -> merge_3.py -> clean_data.ipynb -> featur
 # [X] HELM_USENAME - wearing a helmet or not
 # [X] VTRAFWAYNAME - tells you what kind of road it was one, a two way, that was divided or not etc
 
-
-
-Maybe:
-# [ ] ROLLOVER
-# [ ] UNDEROVERRIDE
-# [ ] ROUTENAME
-# [ ] SEAT_POSNAME
