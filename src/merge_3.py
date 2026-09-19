@@ -1,6 +1,7 @@
 """
 AIPI 510: Module 1 Project: Data Storytelling
 - src/merge_3.py
+Hasan Al-Quaid
 =================================================
 Merge 3 data frames into one big data frame 
     - motorcycles_accidents

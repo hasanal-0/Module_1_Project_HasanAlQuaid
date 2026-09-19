@@ -1,6 +1,7 @@
 """
 AIPI 510: Module 1 Project: Data Storytelling
 - src/load_data.py
+Hasan Al-Quaid
 =================================================
 Loads all raw FARS CSV files from data/raw/ into pandas DataFrames.    
     - accident.csv

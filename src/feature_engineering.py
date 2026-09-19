@@ -1,6 +1,7 @@
 """
 AIPI 510: Module 1 Project: Data Storytelling
 - src/feature_engineering.py
+Hasan Al-Quaid
 =================================================
 Engineer featrues that would give me better insight into the data.
     - US_REGIONS: The US Census Bureau diveds the United states into 4 regions(NorthEast, South, MidWest, and West)
