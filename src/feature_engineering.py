@@ -67,6 +67,9 @@ def us_regions(df):
 
     Param:
         df (pd.DataFrame): dataframe to add a new feature to.
+
+    Returns:
+        pd.DataFrame: The df with a new column: US_REGION
     """
 
     print("--------------------------Start #1----------------------------------------")
@@ -94,6 +97,9 @@ def seasons(df):
 
     Param:
         df (pd.DataFrame): dataframe to add new a feature to.
+
+    Returns:
+        pd.DataFrame: The df with a new column: SEASON
     """
 
     print("--------------------------Start #2----------------------------------------")
@@ -122,6 +128,9 @@ def weekend(df):
 
     Param:
         df (pd.DataFrame): dataframe to add new a feature to.
+
+    Returns:
+        pd.DataFrame: The df with a new column: WEEKEND(bool)
     """
 
     print("--------------------------Start #3----------------------------------------")
@@ -150,6 +159,9 @@ def time_period(df):
 
     Param:
         df (pd.DataFrame): dataframe to add new a feature to.
+
+    Returns:
+        pd.DataFrame: The df with a new column: TIME_PERIOD(str)
     """
     print("--------------------------Start #4----------------------------------------")
     print("\nBeginning shape for TIME_PERIOD:", df.shape) 
@@ -189,6 +201,9 @@ def speed_interval(df):
 
     Param:
         df (pd.DataFrame): dataframe to add new a feature to.
+
+    Returns:
+        pd.DataFrame: The df with a new column: SPEED_INTERVAL(str)
     """
 
     print("--------------------------Start #5----------------------------------------")
@@ -235,6 +250,9 @@ def speeding(df):
 
     Param:
         df (pd.DataFrame): dataframe to add new a feature to.
+
+    Returns:
+        pd.DataFrame: The df with a new column: SPEEDING(bool)
     """
     print("--------------------------Start #6----------------------------------------")
     print("\nBeginning shape for SPEEDING:", df.shape) 
@@ -244,7 +262,7 @@ def speeding(df):
     speeding_list = []
     for speed_code in df["SPEEDREL"]:
         if speed_code == 9:
-            speeding_list.append("Unknown")
+            speeding_list.append(pd.NA)
         elif speed_code in [2,3,4,5]:
             speeding_list.append(True)
         elif speed_code == 0:
@@ -270,6 +288,9 @@ def age_ranges(df):
 
     Param:
         df (pd.DataFrame): dataframe to add new a feature to.
+
+    Returns:
+        pd.DataFrame: The df with a new column: AGE_RANGE(str)
     """
 
     print("--------------------------Start #7----------------------------------------")
@@ -315,6 +336,7 @@ def age_ranges(df):
     print(f"Is col now greater by 1 from old column number: {(col_old + 1) == col_new}")
     print("Check for any null values in AGE_RANGE: ", df["AGE_RANGE"].isnull().sum())
     print("--------------------------End #7----------------------------------------")
+
     return df
 
 def died(df):
@@ -323,6 +345,9 @@ def died(df):
 
     Param:
         df (pd.DataFrame): dataframe to add new a feature to.
+
+    Returns:
+        pd.DataFrame: The df with a new column: DIED(bool)
     """
     print("--------------------------Start #8----------------------------------------")
     print("\nBeginning shape for died:", df.shape) 
@@ -355,6 +380,9 @@ def most_harmful_event(df):
 
     Param:
         df (pd.DataFrame): dataframe to add new a feature to.
+
+    Returns:
+        pd.DataFrame: The df with a new column: MOST_HARMFUL_EVENT(str)
     """
     print("--------------------------Start #9----------------------------------------")
     print("\nBeginning shape for most_harmful_event:", df.shape) 
@@ -391,6 +419,15 @@ def most_harmful_event(df):
     return df
 
 def feature_engineering(df):
+    """
+    Call all functions that will add new featrues one by one.
+
+    Param:
+        df (pd.DataFrame): dataframe to add new features to.
+
+    Returns:
+        pd.DataFrame: The df with new columns
+    """
     us_regions(df)
     seasons(df)
     weekend(df)
@@ -414,4 +451,5 @@ if __name__ == "__main__":
 
     print("\nShape after feature engineering: ", merge_3_df.shape)  
     print("\nNew columns added:", new_columns)
+
     merge_3_df.to_csv("data/processed/final_motorcycles.csv", index=False)
