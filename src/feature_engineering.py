@@ -168,16 +168,16 @@ def time_period(df):
             time_period_list.append("Evening")
         else:
             time_period_list.append("Night")
-    df["TIME_OF_DAY"] = time_period_list
+    df["TIME_PERIOD"] = time_period_list
 
     col_new = df.shape[1]
     row_new = df.shape[0]
-    print("Ending shape for TIME_OF_DAY:", df.shape)
+    print("Ending shape for TIME_PERIOD:", df.shape)
     print("\nVerification:")
     print(f"Rows are the same as old {row_old}, new {row_new}: {row_old == row_new}")
     print(f"Col are NOT the same as old {col_old}, new {col_new}: {col_old == col_new}")
     print(f"Is col now greater by 1 from old column number: {(col_old + 1) == col_new}")
-    print("Check for any null values in TIME_OF_DAY: ", df["TIME_OF_DAY"].isnull().sum())
+    print("Check for any null values in TIME_PERIOD: ", df["TIME_PERIOD"].isnull().sum())
     print("--------------------------End #4----------------------------------------")
 
     return df
@@ -210,7 +210,7 @@ def speed_interval(df):
         elif speed <= 100:
             speed_interval_list.append("81-100")
         elif speed <= 120:
-            speed_interval_list.append("100-120")
+            speed_interval_list.append("101-120")
         else:
             speed_interval_list.append("121+")
     df["SPEED_INTERVAL"] = speed_interval_list
@@ -280,6 +280,8 @@ def age_ranges(df):
     for age in df["AGE"]:
         if age in [998, 999]:
             age_ranges.append("Unknown")
+        elif age == 0:
+            age_ranges.append("0")
         elif age <= 10:
             age_ranges.append("0 to 10")
         elif age <= 20:
@@ -298,8 +300,6 @@ def age_ranges(df):
             age_ranges.append("71 to 80")
         elif age <= 90:
             age_ranges.append("81 to 90")
-        elif age == 0:
-            age_ranges.append("0")
         else:
             age_ranges.append("91+")
 
@@ -413,4 +413,4 @@ if __name__ == "__main__":
 
     print("\nShape after feature engineering: ", merge_3_df.shape)  
     print("\nNew columns added:", new_columns)
-    #merge_3_df.to_csv("data/processed/final_motorcycles.csv", index=False)
+    merge_3_df.to_csv("data/processed/final_motorcycles.csv", index=False)
