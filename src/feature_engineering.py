@@ -210,7 +210,7 @@ def speed_interval(df):
         elif speed <= 100:
             speed_interval_list.append("81-100")
         elif speed <= 120:
-            speed_interval_list.append("100-120")
+            speed_interval_list.append("101-120")
         else:
             speed_interval_list.append("121+")
     df["SPEED_INTERVAL"] = speed_interval_list
@@ -280,6 +280,8 @@ def age_ranges(df):
     for age in df["AGE"]:
         if age in [998, 999]:
             age_ranges.append("Unknown")
+        elif age == 0:
+            age_ranges.append("0")
         elif age <= 10:
             age_ranges.append("0 to 10")
         elif age <= 20:
@@ -298,8 +300,6 @@ def age_ranges(df):
             age_ranges.append("71 to 80")
         elif age <= 90:
             age_ranges.append("81 to 90")
-        elif age == 0:
-            age_ranges.append("0")
         else:
             age_ranges.append("91+")
 
