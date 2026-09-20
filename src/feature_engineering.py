@@ -213,7 +213,7 @@ def speed_interval(df):
 
     speed_interval_list = []
     for speed in df["TRAV_SP"]:
-        if speed in [998, 999]:
+        if pd.isna(speed) or speed in [998, 999]:
             speed_interval_list.append("Unknown")
         elif speed <= 20:
             speed_interval_list.append("0-20")
