@@ -227,8 +227,10 @@ def speed_interval(df):
             speed_interval_list.append("81-100")
         elif speed <= 120:
             speed_interval_list.append("101-120")
+        elif speed <= 140:
+            speed_interval_list.append("121-140")
         else:
-            speed_interval_list.append("121+")
+            speed_interval_list.append("141-152+")
     df["SPEED_INTERVAL"] = speed_interval_list
 
     col_new = df.shape[1]
