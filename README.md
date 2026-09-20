@@ -1,34 +1,35 @@
 # Module_1_Project_HasanAlQuaid
 AIPI 510: Module 1 Project
 
-load_data.py -> filter_motorcycle.py -> merge_3.py -> clean_data.ipynb -> feature_engineering.py
- -> EDA_exploration.ipynb -> Final_Visualization.ipynb 
--> Video -> Submit
+load_data.py -> filter_motorcycle.py -> merge_3.py -> clean_data.ipynb -> feature_engineering.py -> EDA_exploration.ipynb 
+-> final_visualization.ipynb 
 
-## Note to future self: Columns that looked useful from the csv:
 
-## Created Features from these columns 
-# [X] STATENAME_x
-# [X] MONTHNAME_x
-# [X] DAY_WEEKNAME
-# [X] HOUR_x
-# [X] TRAV_SP  
-# [X] SPEEDREL
-# [X] AGE          
-# [X] INJ_SEVNAME  
-# [X] M_HARMNAME   
+TODO for assignment:
+# [ ] Public communication Deliverable (submitted as link), must be a vid
+    - A clear and engaging title
+    - An explanation of why this story matters and who it's for (your audience)
+    - Key findings supported by visualizations and examples
+    - Discussion of data limitations, bias, and ethical implications (in accessible language)
+    - A compelling narrative arc—what surprised you? What should we take away?
 
-## Good to use as is, no engineering needed:
-# [X] HIT_RUN - already in binary format 
-# [X] VPICMAKENAME_x - Motorcycle brand name
-# [X] SEXNAME - m/f not reported/unknown
-# [X] DRINKINGNAME - was driver drinking
-# [X] IMPACT1NAME_x - impact point, where vechicle was impacted
-# [X] MAN_COLLNAME_x - orientation of the two vechiles on impact
-# [X] P_CRASH1NAME - what driver was doing prio to crash
-# [X] RUR_URBNAME_x - rual || Urban || Trafficway(Private property or parking lot)
-# [X] LGT_CONDNAME - light condition of when the crash occured 
-# [X] WEATHERNAME - weather when accident occured
-# [X] HELM_USENAME - wearing a helmet or not
-# [X] VTRAFWAYNAME - tells you what kind of road it was one, a two way, that was divided or not etc
+# [ ] GitHub Repository (submitted as link)
+    All code used for preprocessing, EDA, and feature engineering (scripts, not just notebooks)
+    A README with:
+    Overview of your project
+        Dataset description and citation
+        Step-by-step instructions to reproduce your analysis
 
+    Use of branches and pull requests
+        Each group member must make at least one PR
+        Use best practices for reviews and commits
+
+    Raw and cleaned data (or, if restricted, a clear description of how to access/generate it)
+
+# [ ] Video Presentation (8 minutes max) (presented in class on Sep 22nd)
+    Your audience and why this story matters
+    Your dataset and topic of interest
+    Key trends and visualizations uncovered during EDA
+    Any engineered features that shaped your analysis
+    The story your data tells and its ethical implications
+    Final takeaways
