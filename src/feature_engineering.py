@@ -171,7 +171,7 @@ def time_period(df):
     time_period_list = []
 
     for hour in df["HOUR_x"]:
-        if hour == 99:
+        if pd.isna(hour) or hour == 99:
             time_period_list.append("Unknown")
         elif hour >= 5 and hour < 12:
             time_period_list.append("Morning")
@@ -300,7 +300,7 @@ def age_ranges(df):
 
     age_ranges = []
     for age in df["AGE"]:
-        if age in [998, 999]:
+        if pd.isna(age) or age in [998, 999]:
             age_ranges.append("Unknown")
         elif age == 0:
             age_ranges.append("0")
