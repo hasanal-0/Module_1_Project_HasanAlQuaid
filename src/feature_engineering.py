@@ -171,7 +171,7 @@ def time_period(df):
     time_period_list = []
 
     for hour in df["HOUR_x"]:
-        if hour == 99:
+        if pd.isna(hour) or hour == 99:
             time_period_list.append("Unknown")
         elif hour >= 5 and hour < 12:
             time_period_list.append("Morning")
@@ -213,7 +213,7 @@ def speed_interval(df):
 
     speed_interval_list = []
     for speed in df["TRAV_SP"]:
-        if speed in [998, 999]:
+        if pd.isna(speed) or speed in [998, 999]:
             speed_interval_list.append("Unknown")
         elif speed <= 20:
             speed_interval_list.append("0-20")
@@ -227,8 +227,10 @@ def speed_interval(df):
             speed_interval_list.append("81-100")
         elif speed <= 120:
             speed_interval_list.append("101-120")
+        elif speed <= 140:
+            speed_interval_list.append("121-140")
         else:
-            speed_interval_list.append("121+")
+            speed_interval_list.append("141-152+")
     df["SPEED_INTERVAL"] = speed_interval_list
 
     col_new = df.shape[1]
@@ -300,7 +302,7 @@ def age_ranges(df):
 
     age_ranges = []
     for age in df["AGE"]:
-        if age in [998, 999]:
+        if pd.isna(age) or age in [998, 999]:
             age_ranges.append("Unknown")
         elif age == 0:
             age_ranges.append("0")

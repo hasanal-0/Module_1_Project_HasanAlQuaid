@@ -29,6 +29,13 @@ def remove_duplicate_columns(df):
     return df.loc[:, ~duplicate_cols]
 
 def merge_pipeline():
+    """
+    Load the accident, person, and vehicle datasets,
+    merge all datasets into one df, and remove duplicate columns.
+
+    Returns:
+        pd.DataFrame: A merged DataFrame containing only motorcycle accident
+    """
     accident, person, vehicle, = load_data()
     motorcycles_accidents = filter_motorcycle_data(vehicle)  
     print("motorcycles_accidents:", motorcycles_accidents.shape)
