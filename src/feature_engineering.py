@@ -4,7 +4,7 @@ AIPI 510: Module 1 Project: Data Storytelling
 Hasan Al-Quaid
 =================================================
 Engineer featrues that would give me better insight into the data.
-    - US_REGIONS: The US Census Bureau diveds the United states into 4 regions(NorthEast, South, MidWest, and West)
+    - US_REGION: The US Census Bureau diveds the United states into 4 regions(NorthEast, South, MidWest, and West)
     - SEASON: maps the months of the year to seasons
     - WEEKEND: if the day of the accident was a weekday(False) or on the weekend(True)
     - TIME_PERIOD: splits the day up into 4 periods (Morning, Afternoon, Evening, and Night)
