@@ -57,9 +57,9 @@ Module_1_Project_HasanAlQuaid/
 │   ├── load_data.py
 │   ├── filter_motorcycle.py
 │   ├── merge_3.py
+│   ├── clean_data.py
 │   └── feature_engineering.py
 ├── notebooks/
-│   ├── clean_data.ipynb
 │   ├── EDA.ipynb
 │   └── final_visualizations.ipynb
 └── README.md
@@ -85,11 +85,11 @@ Module_1_Project_HasanAlQuaid/
 - **`load_data.py`** — Loads the three source datasets
 - **`filter_motorcycle.py`** — Selects only motorcycle related records
 - **`merge_3.py`** — Merges the three csvs into one dataframe
+- **`clean_data.py`** — Cleans the merged data and handles missing values and special codes.
 - **`feature_engineering.py`** — Creates new features and final CSV 
 
 ### Notebooks — `notebooks/`
 
-- **`clean_data.ipynb`** — Cleans the merged data and handles missing values and special codes.
 - **`EDA.ipynb`** — Exploratory Data Analysis
 - **`final_visualizations.ipynb`** — Creates clean visualizations and findings.
 
@@ -99,7 +99,6 @@ Module_1_Project_HasanAlQuaid/
 - Install the following if you do not have:
     - import pandas as pd
     - import os
-    - import pandas as pd
     - import matplotlib.pyplot as plt
     - import seaborn as sns
     - import textwrap
@@ -116,7 +115,7 @@ Run the data pipeline in the following processing order:
     ``` 
     Outputs: interim/merged_3_accident_person_vehicle.csv
     ```
-4. `clean_data.ipynb`
+4. `clean_data.py`
     ``` 
     Outputs: /interim/merged_3_clean.csv
     ```
