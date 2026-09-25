@@ -69,7 +69,7 @@ Module_1_Project_HasanAlQuaid/
 
 - **`raw/`** — Original source datasets:
   - `accident.csv`
-  - `person.csv`
+  - `person.csv`  **- This file would need to be downloaded from the FARS site.**
   - `vehicle.csv`
 
 - **`interim/`** — Filtered, merged, and cleaned intermediate datasets:
